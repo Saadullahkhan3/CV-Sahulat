@@ -15,7 +15,7 @@ def setup_logger():
     os.makedirs(log_dir, exist_ok=True)
     
     # Create logger
-    logger = logging.getLogger("ocr_api")
+    logger = logging.getLogger(settings.APP_TITLE)
     logger.setLevel(logging.INFO)
     
     # Remove existing handlers to avoid duplicates
@@ -29,7 +29,7 @@ def setup_logger():
     # File handler - daily log files
     today = datetime.now().strftime("%Y-%m-%d")
     file_handler = logging.FileHandler(
-        os.path.join(log_dir, f"ocr_api_{today}.log"),
+        os.path.join(log_dir, f"{settings.APP_TITLE.lower().replace(" ", "_")}_{today}.log"),
         encoding='utf-8'
     )
     file_handler.setLevel(logging.INFO)
@@ -50,9 +50,9 @@ def setup_logger():
 logger = setup_logger()
 
 app = FastAPI(
-    title=settings.API_TITLE, 
-    description=settings.API_DESCRIPTION, 
-    version=settings.API_VERSION
+    title=settings.APP_TITLE, 
+    description=settings.APP_DESCRIPTION, 
+    version=settings.APP_VERSION
 )
 
 # Add CORS middleware
@@ -66,7 +66,7 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
-    return {"message": "OCR API is running!", "version": "1.0.0"}
+    return {"message": "CV Sahulat is running!", "version": "1.0.0"}
 
 # New endpoint for analyzing CV and Job Description
 @app.post("/analyze")
@@ -119,5 +119,5 @@ async def analyze(
 
 if __name__ == "__main__":
     import uvicorn
-    logger.info("Starting OCR API server...")
+    logger.info(f"Starting {settings.APP_TITLE} server...")
     uvicorn.run(app, host="0.0.0.0", port=8080)
