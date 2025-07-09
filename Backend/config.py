@@ -18,6 +18,10 @@ class Settings:
         
         # Poppler configuration for PDF processing (Docker/Linux - poppler-utils will be in PATH)
         POPPLER_PATH = None
+
+        os.environ["HF_HOME"] = "/tmp/huggingface"
+        os.environ["TRANSFORMERS_CACHE"] = "/tmp/huggingface"
+        os.environ["HF_DATASETS_CACHE"] = "/tmp/huggingface"
     
     # File upload limits
     MAX_FILE_SIZE = 5 * 1024 * 1024  # 5MB
