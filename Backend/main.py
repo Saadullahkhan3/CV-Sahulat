@@ -29,7 +29,7 @@ def setup_logger():
     # File handler - daily log files
     today = datetime.now().strftime("%Y-%m-%d")
     file_handler = logging.FileHandler(
-        os.path.join(log_dir, f"{settings.APP_TITLE.lower().replace(" ", "_")}_{today}.log"),
+        os.path.join(log_dir, f"{settings.APP_TITLE}_{today}.log"),
         encoding='utf-8'
     )
     file_handler.setLevel(logging.INFO)

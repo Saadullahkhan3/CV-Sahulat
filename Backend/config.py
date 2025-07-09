@@ -29,7 +29,7 @@ class Settings:
     SUPPORTED_PDF_EXTENSION = 'pdf'
     
     # API configuration
-    APP_TITLE = "CV Sahulat"
+    APP_TITLE = "CV_Sahulat"
     APP_DESCRIPTION = "OCR API for extracting text from images and PDFs"
     APP_VERSION = "1.0.0"
 
