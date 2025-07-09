@@ -6,19 +6,18 @@ import platform
 
 # Configuration settings
 class Settings:
-    def __init__(self):
-        # Windows Config
-        if os.name == "nt" or platform.system() == "Windows":
-            TESSERACT_CMD = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-            POPPLER_PATH = r"D:\Learning\Img to Docs\work\poppler-24.08.0\Library\bin"
+    # Windows Config
+    if os.name == "nt" or platform.system() == "Windows":
+        TESSERACT_CMD = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+        POPPLER_PATH = r"D:\Learning\Img to Docs\work\poppler-24.08.0\Library\bin"
 
-        # Linux or Docker Config
-        else:
-            # Tesseract configuration (Docker/Linux - tesseract will be in PATH)
-            TESSERACT_CMD = "tesseract"
-            
-            # Poppler configuration for PDF processing (Docker/Linux - poppler-utils will be in PATH)
-            POPPLER_PATH = None
+    # Linux or Docker Config
+    else:
+        # Tesseract configuration (Docker/Linux - tesseract will be in PATH)
+        TESSERACT_CMD = "tesseract"
+        
+        # Poppler configuration for PDF processing (Docker/Linux - poppler-utils will be in PATH)
+        POPPLER_PATH = None
     
     # File upload limits
     MAX_FILE_SIZE = 5 * 1024 * 1024  # 5MB
