@@ -11,7 +11,7 @@ from utils import ocr_processor
 # Setup logging
 def setup_logger():
     # Create logs directory if it doesn't exist
-    log_dir = "logs"
+    log_dir = "/tmp/logs"
     os.makedirs(log_dir, exist_ok=True)
     
     # Create logger
