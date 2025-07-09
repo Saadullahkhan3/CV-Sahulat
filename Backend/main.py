@@ -2,52 +2,20 @@ from fastapi import FastAPI, File, UploadFile, HTTPException, Form
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from typing import Optional
-import logging
-import os
-from datetime import datetime
-from config import settings
-from ocr import ocr_processor
 
-# Setup logging
-def setup_logger():
-    # Create logs directory if it doesn't exist
-    log_dir = "/tmp/logs"
-    os.makedirs(log_dir, exist_ok=True)
-    
-    # Create logger
-    logger = logging.getLogger(settings.APP_TITLE)
-    logger.setLevel(logging.INFO)
-    
-    # Remove existing handlers to avoid duplicates
-    logger.handlers.clear()
-    
-    # Create formatter
-    formatter = logging.Formatter(
-        '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    )
-    
-    # File handler - daily log files
-    today = datetime.now().strftime("%Y-%m-%d")
-    file_handler = logging.FileHandler(
-        os.path.join(log_dir, f"{settings.APP_TITLE}_{today}.log"),
-        encoding='utf-8'
-    )
-    file_handler.setLevel(logging.INFO)
-    file_handler.setFormatter(formatter)
-    
-    # Console handler
-    console_handler = logging.StreamHandler()
-    console_handler.setLevel(logging.INFO)
-    console_handler.setFormatter(formatter)
-    
-    # Add handlers to logger
-    logger.addHandler(file_handler)
-    logger.addHandler(console_handler)
-    
-    return logger
+from config import settings
+
+from logger import setup_logger
+
+from ocr import ocr_processor
+from analyzer import analyzer
+
+
+
 
 # Initialize logger
 logger = setup_logger()
+
 
 app = FastAPI(
     title=settings.APP_TITLE, 
@@ -111,8 +79,10 @@ async def analyze(
         content = await job_desc_file.read()
         extracted_job = ocr_processor.extract_text_from_file(content, job_desc_file.content_type, job_desc_file.filename)
 
+    analyzed_text = analyzer(extracted_cv, extracted_job)
+
     return JSONResponse(
-        content={"analyzed_text": extracted_cv[0:3]+extracted_job[0:3]},
+        content={"analyzed_text": analyzed_text},
         # content={"cv_text": extracted_cv, "job_desc_text": extracted_job},
         status_code=200
     )

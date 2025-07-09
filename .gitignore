@@ -45,7 +45,6 @@ venv.bak/
 
 # dotenv files
 .env
-.env.*
 
 # Logs
 logs/
@@ -106,7 +105,8 @@ Backend/.venv/
 
 # dotenv files
 Backend/.env
-Backend/.env.*
+Backend/.env.local
+Backend/.env.production
 
 # Logs (your FastAPI daily logs)
 Backend/logs/

@@ -8,3 +8,8 @@ pdf2image==1.17.0
 pillow==11.1.0
 pdfplumber==0.11.7
 requests==2.31.0
+# For text analysis
+sentence-transformers
+scikit-learn
+torch
+numpy
