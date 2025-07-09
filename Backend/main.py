@@ -112,7 +112,8 @@ async def analyze(
         extracted_job = ocr_processor.extract_text_from_file(content, job_desc_file.content_type, job_desc_file.filename)
 
     return JSONResponse(
-        content={"cv_text": extracted_cv, "job_desc_text": extracted_job},
+        content={"analyzed_text": extracted_cv[0:50]+extracted_job[0:20]},
+        # content={"cv_text": extracted_cv, "job_desc_text": extracted_job},
         status_code=200
     )
 

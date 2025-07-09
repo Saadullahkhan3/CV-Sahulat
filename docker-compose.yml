@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: ocr_server
+    container_name: cv_sahulat
     ports:
       - "8080:8080"
     volumes:

@@ -50,7 +50,7 @@ RUN apt-get purge -y --auto-remove build-essential \
 COPY Backend/ /app/
 
 # Expose port
-EXPOSE 8080
+EXPOSE 7860
 
 # Default command
 CMD ["python", "app.py"]

@@ -1,15 +1,16 @@
 import requests as rq
 
 
-# print(rq.__version__)
 
 import io 
 from typing import BinaryIO
 import os
 import mimetypes
 
-URL = "http://0.0.0.0:8080/"
-URL = "http://127.0.0.1:8080/"
+if mode:=input("Enter mode 1 for dev and 2 for production mode: ").strip().lower() == "1":
+    URL = "http://127.0.0.1:8080/"
+else:
+    URL = "https://saadullahkhan3-cv-sahulat.hf.space/"
 
 # def send_post():
 #     pass 
@@ -19,22 +20,6 @@ cv_file = r"D:\Learning\BanoQabil 4.0 - DevOps\CVSahulat\hidden\SaadullahKhan_So
 job_desc_file = r"D:\Learning\BanoQabil 4.0 - DevOps\CVSahulat\hidden\job_desc_example.png"
 # exit()
 
-# a = io.FileIO(cv_file)
-# print(type(a))
-# b = open(cv_file, "rb")
-# print(type(b))
-# c = io.BytesIO()
-
-# exit()
-# Get the MIME type based on file extension
-# content_type, _ = mimetypes.guess_type(job_desc_file)
-# if content_type is None:
-#     content_type = 'application/octet-stream'  # fallback
-# with open(job_desc_file, "rb") as file:
-#     files = {"job_desc_file": (os.path.basename(job_desc_file), file, content_type)}
-#     print(f"Sending file with content type: {files}")
-#     response = rq.post(URL+"analyze/", data={"cv_text": "CV CV"}, files=files, timeout=30)
-# print(response.json())
 
 
 print("\n\nCV as Text and Job Desc as Text:")
