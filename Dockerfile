@@ -38,7 +38,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 
 # Copy and install Python dependencies first (for better caching)
-COPY .Backend/requirements.txt /app/
+COPY Backend/requirements.txt /app/
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 RUN pip install --no-cache-dir -r requirements.txt
 
@@ -47,7 +47,7 @@ RUN apt-get purge -y --auto-remove build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy project files (this layer will change most often)
-COPY .Backend/ /app/
+COPY Backend/ /app/
 
 # Expose port
 EXPOSE 8080
