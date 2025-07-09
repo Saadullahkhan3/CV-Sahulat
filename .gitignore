@@ -1,0 +1,115 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+*.whl
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*,cover
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# Virtual environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# dotenv files
+.env
+.env.*
+
+# Logs
+logs/
+
+# Docker
+docker-compose.override.yml
+
+# macOS
+.DS_Store
+
+# Windows
+
+
+# Project Related
+*logs/
+
+# My Things
+hidden
+
+# --- Backend (FastAPI) artifacts ---
+Backend/__pycache__/
+Backend/*.py[cod]
+Backend/*$py.class
+Backend/*.so
+
+# Distribution / packaging
+Backend/build/
+Backend/dist/
+Backend/*.egg-info/
+Backend/.eggs/
+Backend/wheels/
+Backend/*.whl
+
+# pip installer logs
+Backend/pip-log.txt
+Backend/pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+Backend/htmlcov/
+Backend/.coverage
+Backend/.coverage.*
+Backend/.cache/
+Backend/.pytest_cache/
+Backend/nosetests.xml
+Backend/coverage.xml
+Backend/*,cover
+
+# Jupyter Notebook checkpoints
+Backend/.ipynb_checkpoints/
+
+# Virtual environments
+Backend/env/
+Backend/venv/
+Backend/ENV/
+Backend/env.bak/
+Backend/venv.bak/
+Backend/.venv/
+
+# dotenv files
+Backend/.env
+Backend/.env.*
+
+# Logs (your FastAPI daily logs)
+Backend/logs/
+
+# Docker overrides (if any)
+Backend/docker-compose.override.yml

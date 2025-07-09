@@ -1,0 +1,58 @@
+# --- Backend Python artifacts ---
+Backend/__pycache__/
+Backend/*.pyc
+Backend/*.pyo
+Backend/*.pyd
+Backend/.Python
+Backend/.pytest_cache/
+
+# --- Git ---
+.git
+.gitignore
+.gitattributes
+
+# --- IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Backend logs & temps ---
+Backend/*.log
+Backend/*.tmp
+Backend/*.temp
+Backend/*.pid
+Backend/logs/
+Backend/uploads/
+Backend/temp/
+
+# --- Docs / markdown (if not needed in image) ---
+Backend/README*.md
+Backend/docs/
+Backend/*.md
+Backend/CHANGELOG*
+
+# --- Tests ---
+Backend/test_*
+Backend/*_test.py
+Backend/tests/
+
+# --- Local dev files ---
+Backend/start_server.bat
+Backend/start_server.ps1
+Backend/command.txt
+Backend/.env
+Backend/.env.local
+
+# --- Build / packaging ---
+Backend/build/
+Backend/dist/
+Backend/*.egg-info/
+
+# Frontend
+Frontend/
