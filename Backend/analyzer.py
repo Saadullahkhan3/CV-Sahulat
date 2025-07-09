@@ -31,4 +31,4 @@ def analyzer(cv: str, jd: str) -> Dict[str, str]:
     # Final analysis summary
     summary = f"Match Score: {match_score}%. <br/>Top CV Keywords: {', '.join(cv_keywords)}. <br/>Top JD Keywords {', '.join(jd_keywords)}."
 
-    return {"analyzed_text": summary}
+    return summary
