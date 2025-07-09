@@ -6,7 +6,7 @@ import logging
 import os
 from datetime import datetime
 from config import settings
-from utils import ocr_processor
+from ocr import ocr_processor
 
 # Setup logging
 def setup_logger():
