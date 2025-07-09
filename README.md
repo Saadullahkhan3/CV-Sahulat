@@ -1,12 +1,12 @@
 ---
-title: {{title}}
-emoji: {{emoji}}
-colorFrom: {{colorFrom}}
-colorTo: {{colorTo}}
-sdk: {{sdk}}
-sdk_version: "{{sdkVersion}}"
+title: CV Sahulat
+emoji: 📄
+colorFrom: yellow
+colorTo: indigo
+sdk: docker
+sdk_version: "latest"
 app_file: app.py
-pinned: false
+pinned: true
 ---
 
 # CV Sahulat
