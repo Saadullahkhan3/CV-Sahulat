@@ -29,6 +29,6 @@ def analyzer(cv: str, jd: str) -> Dict[str, str]:
     jd_keywords = extract_keywords(jd)
 
     # Final analysis summary
-    summary = f"Match Score: {match_score}%. <br/>Top CV Keywords: {', '.join(cv_keywords)}. <br/>Top JD Keywords {', '.join(jd_keywords)}."
+    summary = f"Match Score: {match_score}%. Top CV Keywords: {', '.join(cv_keywords)}. Top JD Keywords {', '.join(jd_keywords)}."
 
     return summary

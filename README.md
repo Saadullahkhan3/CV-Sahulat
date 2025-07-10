@@ -17,13 +17,13 @@ CV Sahulat is a web application that helps you analyze your Resume (CV) against 
 
 ## 🚀 Technologies Used
 
-- **Frontend:** [Next.js](https://nextjs.org/)  
-  A modern React framework for building fast, interactive user interfaces.  
+- **Frontend:** 
+  Next.js, A modern React framework for building fast, interactive user interfaces.  
   _Deployed on [Vercel](https://cv-sahulat.vercel.app/)_
 
-- **Backend:** [FastAPI](https://fastapi.tiangolo.com/)  
-  A high-performance Python framework for building APIs, handling OCR and analysis.  
-  _Deployed on [Hugging Face Spaces](https://saadullahkhan3-cv-sahulat.hf.space/)_
+- **Backend:** 
+  FastAPI based, A high-performance Python framework for building APIs, handling OCR and analysis.  
+  Deployed on Hugging Face Spaces: https://saadullahkhan3-cv-sahulat.hf.space/
 
 - **OCR:** [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) & [Poppler](https://poppler.freedesktop.org/)  
   Used for extracting text from images and PDF files.
