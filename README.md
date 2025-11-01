@@ -18,7 +18,7 @@ CV Sahulat is a web application that helps you analyze your Resume (CV) against 
 ## 🚀 Technologies Used
 
 - **Frontend:** 
-  Next.js, A modern React framework for building fast, interactive user interfaces.  
+  Next.js, A modern React framework for building fast, interactive user interfaces. (Vibe coded, but wasn't easy)  
   _Deployed on [Vercel](https://cv-sahulat.vercel.app/)_
 
 - **Backend:** 
